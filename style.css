@@ -97,3 +97,43 @@ main {
   overflow: hidden;
   transition: box-shadow 0.2s ease-out;
 }
+
+.box.active {
+  box-shadow: 0 0 10px 5px rgb(252, 246, 244);
+}
+
+.box img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+
+.box .info {
+  background-color: rgb(122, 133, 233);
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 12px;
+  text-align: center;
+  height: 100%;
+}
+
+@media (max-width: 1100px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
